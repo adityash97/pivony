@@ -2,7 +2,6 @@ callAPi = (endpoint) => {
     this.url = 'http://localhost:8000/' + endpoint
     axios.get(this.url)
         .then(res => {
-            console.log(res)
             this.labels = []
             this.datas = []
             res.data.map((Element) => {

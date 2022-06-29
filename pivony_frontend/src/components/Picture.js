@@ -15,7 +15,6 @@ function Picture({ id, url }) {
 
     return (
         <>
-            {id}
             <img
                 ref={drag}
                 src={url}

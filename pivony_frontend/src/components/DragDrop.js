@@ -51,7 +51,6 @@ function DragDrop() {
 
     const addImageToBoard = (id ) => {
         // const pictureList = PictureList.filter((picture) => id === picture.id);
-        debugger
         if (typeof (id) != 'number'){
             id = parseInt(id.currentTarget.getAttribute("picId"))
         }
@@ -65,8 +64,7 @@ function DragDrop() {
         }
 
         
-        // debugger
-        console.log("addImageToBoard : id", id,board)
+
 
     };
 
@@ -83,7 +81,7 @@ function DragDrop() {
             <div className="Board col m-5" ref={drop}>
                 {board.length == 0 ? 
                 <div className="row">
-                    <h5>PLease Drag and Drop here 1</h5>
+                    <h5>Please Drag and Drop here </h5>
                 </div> 
                 : 
                 <>
@@ -93,7 +91,6 @@ function DragDrop() {
                             </div>
                 </div>
                 <div className="row">
-                    {console.log("board : ",board)}
                     {board.map((picture) => {
                         return <Chart id={picture.id} />;
                     })}
@@ -105,7 +102,7 @@ function DragDrop() {
             <div className="Board2 col m-5" ref={drop2}>
                 {board2.length == 0 ?
                     <div className="row">
-                        <h5>PLease Drag and Drop here</h5>
+                        <h5>Please Drag and Drop here</h5>
                     </div>
                     : 
                     <>

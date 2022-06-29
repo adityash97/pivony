@@ -9,7 +9,6 @@ import axios from "axios";
 class SomeChart extends Component{
     constructor(props ){
         super(props)
-        console.log("Props : ",props)
         this.state = {
             chartData : {
                 labels: [],
@@ -44,7 +43,6 @@ class SomeChart extends Component{
         this.url = 'http://localhost:8000/' + endpoint
         axios.get(this.url)
             .then(res => {
-                console.log(res)
                 this.labels = []
                 this.datas = []
                 res.data.map((Element) => {
