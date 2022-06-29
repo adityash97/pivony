@@ -8,7 +8,7 @@ For frontend goto pivony_frontend and use command "npm i"
 
 step 2 : 
 run both frontend and backend server seperatly.
-For frontend : npm start
-For backend : python manage.py runserver.
+For frontend use command : npm start
+For backend use command : python manage.py runserver
 
 
