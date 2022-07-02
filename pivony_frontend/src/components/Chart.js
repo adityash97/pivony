@@ -40,7 +40,7 @@ class SomeChart extends Component{
     }
 
     callAPi = (endpoint) => {
-        this.url = 'http://localhost:8000/' + endpoint
+        this.url = 'http://localhost:8000/api/' + endpoint
         axios.get(this.url)
             .then(res => {
                 this.labels = []
