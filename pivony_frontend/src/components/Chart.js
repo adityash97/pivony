@@ -40,32 +40,21 @@ class SomeChart extends Component{
     }
 
     callAPi = (endpoint) => {
-        this.url = 'http://localhost:8000/api/' + endpoint
-        axios.get(this.url)
-            .then(res => {
-                this.labels = []
-                this.datas = []
-                res.data.map((Element) => {
-                    this.labels.push(Element.paramA)
-                    this.datas.push(Element.paramB)
-
-                })
-                this.setState({
-                    chartData: {
-                        labels: this.labels,
-                        datasets: [
-                            {
-                                label: "total count/value",
-                                data: this.datas,
-                                backgroundColor: ["aqua", "green", "red", "yellow", "black"],
-                                borderColor: ["aqua", "green", "red", "yellow", "black"],
-                                borderWidth: 0.5,
-                            },
-                        ],
-                    }
-                })
-
-            })
+        this.setState({
+            chartData: {
+                labels: ["Landing", "Site", "App", "Board", "Bill"],
+                datasets: [
+                    {
+                        label: "total count/value",
+                        data: [50, 60, 55, 36, 85],
+                        backgroundColor: ["aqua", "green", "red", "yellow", "black"],
+                        borderColor: ["aqua", "green", "red", "yellow", "black"],
+                        borderWidth: 0.5,
+                    },
+                ],
+            }
+        })
+       
     }
 
  

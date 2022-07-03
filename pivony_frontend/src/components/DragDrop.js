@@ -121,6 +121,7 @@ function DragDrop() {
             </div>
 
             <div className="Pictures col m-5 ">
+                <h3 className="text-center">Add a Gadget</h3>
                 <div className="row">
                     {PictureList.map((picture) => {
                         
